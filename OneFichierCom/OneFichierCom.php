@@ -22,12 +22,13 @@ class SynoFileHosting
     
     private $CHECKLINK_URL_REQ = 'https://1fichier.com/check_links.pl';
     
-    private $FILEID_REGEX = '`https?:\/\/1fichier\.com\/\?([a-zA-Z0-9]+)\/?`i';
+    private $FILEID_REGEX = '`https?:\/\/1fichier\.com\/\?([a-zA-Z0-9=&]+)\/?`i';
     private $FILEID_OLD_REGEX = '`https?:\/\/([a-z0-9A-Z]+)\.1fichier\.com\/?`i';
     private $FILE_OFFLINE_REGEX = '`BAD LINK|NOT FOUND`i';
     private $DOWNLOAD_WAIT_REGEX = '`You must wait (\d+) minutes`i';
-    private $PREMIUM_REAL_URL_REGEX = '`https?:\/\/[a-z0-9]+-[a-z0-9]+\.1fichier\.com\/[a-z0-9]+`i';
-    private $FREE_REAL_URL_REGEX = '`href=\"(https?:\/\/[a-z0-9]+-[a-z0-9]+\.1fichier\.com\/[a-z0-9]+)\"?`i';
+    private $PREMIUM_REAL_URL_REGEX = '`https?:\/\/[a-z0-9]+-[a-z0-9]+\.1fichier\.com\/[a-z0-9=&]+`i';
+    private $FREE_REAL_URL_REGEX = '`href=\"(https?:\/\/[a-z0-9]+-[a-z0-9]+\.1fichier\.com\/[a-z0-9&=]+)\"?`i';
+ 
     private $DEBUG_REGEX = '/(https?:\/\/1fichier\.com\/.+)\/debug/i';
     private $ADZONE_REGEX = '`name="adzone" value="(.+?)"`i';
     
